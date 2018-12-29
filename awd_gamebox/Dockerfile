@@ -24,9 +24,9 @@ RUN mkdir /home/ctf/bin && \
     cp /bin/sh /home/ctf/bin && \
     cp /bin/ls /home/ctf/bin && \
     cp /bin/cat /home/ctf/bin && \
-	cp /bin/bash /home/ctf/bin && \
-	cp /bin/nc /home/ctf/bin && \
-	cp /usr/bin/git /home/ctf/bin
+    cp /bin/bash /home/ctf/bin && \
+    cp /bin/nc /home/ctf/bin && \
+    cp /usr/bin/git /home/ctf/bin
 
 COPY ./ctf.xinetd /etc/xinetd.d/ctf
 COPY ./start.sh /start.sh
