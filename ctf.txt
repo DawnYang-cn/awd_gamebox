@@ -1,0 +1,87 @@
+team1:flag{123}
+team2:flag{234}
+team3:flag{345}
+flag{111}:team1
+flag{222}:team2
+flag{123}:team1
+flag{234}:team2
+flag{333}:team3
+flag{345}:team3
+
+
+team1_was_attacked_by:","
+team2_was_attacked_by:","
+team3_was_attacked_by:","
+
+
+
+team1_pwn1:flag{123}
+team2_pwn1:flag{234}
+team3_pwn1:flag{345}
+flag{111}:team1_pwn1
+flag{222}:team2_pwn1
+flag{123}:team1_pwn1
+flag{234}:team2_pwn1
+flag{333}:team3_pwn1
+flag{345}:team3_pwn1
+
+
+team1_pwn1_was_attacked_by:","
+team2_pwn1_was_attacked_by:","
+team3_pwn1_was_attacked_by:","
+https://github.com/imagemlt/tinyAWDplatform
+tinyAWDplatform
+基于docker运行在单机上的awd平台，仅适用于小规模的队内练习使用
+
+https://github.com/Yof3ng/AWD_docker
+打造一个集web和pwn于一体的AWD docker
+
+
+https://github.com/Asuri-Team/ctf-xinetd
+A docker image to hold pwn challenges in ctf war
+
+
+https://www.jianshu.com/p/d710f403f258
+AWD线下赛pwn靶机搭建
+
+https://github.com/nbulischeck/DCTF
+DCTF is a Docker-based CTF platform that is used to deploy (currently) binary and web(flask) challenges in a docker container.
+
+Kevateam awd
+
+ictf-framework
+
+http://ctf-gameserver.org/intro.html#what-s-included
+
+https://github.com/zhl2008/awd-platform
+webdocker
+
+
+
+https://github.com/Eadom/ctf_xinetd.git
+Weiran12
+
+
+清空redis
+docker build -t "gamebox" .
+init.py确定队伍数量
+genflag.sh修改队伍数量
+新建docker
+docker run -d -v /home/awd/gamebox/awd_gamebox/team0:/home/ctf/flag -p 18080:80 -p 13306:3306 -p 10022:22 -p 19999:9999 -h "gamebox0" --name="gamebox0" gamebox
+docker run -d -v /home/awd/gamebox/awd_gamebox/team1:/home/ctf/flag -p 18081:80 -p 13307:3306 -p 10023:22 -p 20000:9999 -h "gamebox1" --name="gamebox1" gamebox
+开启服务
+修改密码
+启动flask
+运行genflag.sh
+搞定
+
+docker exec -ti 15d94d229fcb /bin/bash
+
+
+docker run -it --rm -h pwndocker --name pwndocker -v E:/docker:/ctf/work -p 23946:23946 --cap-add=SYS_PTRACE skysider/pwndocker
+
+
+
+docker run -d -v E:/newgamebox/awd_gamebox/team1/bin:/home/ctf -p 18081:80 -p 13307:3306 -p 10023:22 -p 20000:9999 -h "gamebox1" --name="gamebox1" gamebox
+
+docker run -d -p 18080:80 -p 13306:3306 -p 10022:22 -p 19999:9999 -h "gamebox" --name="gamebox" gamebox
