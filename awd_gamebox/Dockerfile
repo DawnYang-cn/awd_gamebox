@@ -36,8 +36,8 @@ RUN echo "Blocked by ctf_xinetd" > /etc/banner_fail
 
 RUN chmod +x /start.sh
 
-COPY ./project/html/ /var/www/html/web/
-COPY ./project/bin/ /home/ctf/
+COPY ./html/ /var/www/html/web/
+COPY ./bin/ /home/ctf/
 COPY ./sshd_config.txt /etc/ssh/sshd_config
 RUN chown -R root:ctf /home/ctf && \
     chmod -R 755 /home/ctf && \
@@ -49,7 +49,6 @@ RUN chown -R root:ctf /home/ctf && \
 RUN service ssh start
 CMD ["/start.sh"]
 CMD ["/genflag.sh"]
-CMD ["/run.sh"]
 
 
 EXPOSE 9999
